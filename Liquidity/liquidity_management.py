@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 def nettoyer_donnees(df):
     """
@@ -98,8 +99,9 @@ def fusionner_donnees(prices, data):
 def pretraitement(date, seuil_atv, seuil_quantite):
     """
     Effectue le prétraitement des données de volumes et de prix pour analyser la liquidité d'un portefeuille.
-    """    
-    df = pd.read_excel("Liquidity\data.xlsx")
+    """  
+    file_path = os.path.join(os.path.dirname(__file__), 'Liquidity', 'data.xlsx')
+    df = pd.read_excel(file_path)
     data = nettoyer_donnees(df)
     data = calculer_atv(data)
     data = creer_tableau_atv(data, date)
