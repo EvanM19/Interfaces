@@ -1,4 +1,3 @@
-# streamlit run app.py
 import liquidity_management
 import streamlit as st
 
