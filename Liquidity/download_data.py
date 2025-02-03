@@ -48,7 +48,7 @@ def merge_cac40_data(start_date: str, end_date: str) -> pd.DataFrame:
     merged_data = pd.concat(all_data, axis=1)
 
     # Télécharger en excel
-    merged_data.to_excel("data.xlsx")
+    merged_data.to_excel("Liquidity\data.xlsx")
     return merged_data
 
 # merge_cac40_data(start_date = "2022-01-01", end_date = "2024-01-01")
