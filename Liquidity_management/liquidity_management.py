@@ -99,7 +99,7 @@ def pretraitement(date, seuil_atv, seuil_quantite):
     """
     Effectue le prétraitement des données de volumes et de prix pour analyser la liquidité d'un portefeuille.
     """    
-    df = pd.read_excel("Liquidity_management\data.xlsx")
+    df = pd.read_excel("data.xlsx")
     data = nettoyer_donnees(df)
     data = calculer_atv(data)
     data = creer_tableau_atv(data, date)
