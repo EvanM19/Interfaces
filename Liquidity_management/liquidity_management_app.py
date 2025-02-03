@@ -1,5 +1,5 @@
 # streamlit run app.py
-import Liquidity_management.liquidity_management as liquidity_management
+import liquidity_management
 import streamlit as st
 
 # Configuration de la page
